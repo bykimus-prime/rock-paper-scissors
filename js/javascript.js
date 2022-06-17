@@ -1,22 +1,18 @@
 // Write function called computerPlay that randomly returns rock, paper, or scissors.
 
 function computerPlay() {
-    const number = Math.floor(Math.random() * 3);
-    if (number === 0) {
+    const janken = Math.floor(Math.random() * 3);
+    console.log(janken);
+    if (janken === 0) {
         return 'rock';
     }
-    if (number === 1) {
+    if (janken === 1) {
         return 'paper';
+    } else {
+        return 'scissors';
     }
-    return 'scissors';
 }
-if (computerPlay() === 'rock') {
-    console.log('this is rock');
-} else if (computerPlay () === 'paper') {
-    console.log('this is paper')
-} else {
-    console.log('this is scissors')
-}
+console.log(computerPlay());
 
 // Write function that plays single round of game. Function should take
 // 2 parameters, playerSelection and computerSelection, and return string
