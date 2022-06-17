@@ -1,5 +1,17 @@
-// Play against the computer, begin with function called computerPlay
-// that will randomly return rock, paper, or scissors.
+// Write function called computerPlay that randomly returns rock, paper, or scissors.
+
+function computerPlay() {
+    return Math.floor(Math.random() * 3) + 1;
+}
+    // this Math.floor returns a random integer from 1 to 3
+    const rndInt = Math.floor(Math.random() * 3) + 1;
+    if (rndInt === 3) {
+        console.log("Scissors!")
+    } else if (rndInt === 2) {
+        console.log("Paper!");
+    } else if (rndInt === 1) {
+        console.log("Rock!");
+    }
 
 // Write function that plays single round of game. Function should take
 // 2 parameters, playerSelection and computerSelection, and return string
