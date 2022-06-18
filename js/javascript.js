@@ -2,7 +2,7 @@
 
 function computerPlay() {
     const janken = Math.floor(Math.random() * 3);
-    console.log(janken);
+    console.log(janken); // let's us see what the computer picks
     if (janken === 0) {
         return 'rock';
     }
@@ -12,11 +12,30 @@ function computerPlay() {
         return 'scissors';
     }
 }
-console.log(computerPlay());
 
-// Write function that plays single round of game. Function should take
-// 2 parameters, playerSelection and computerSelection, and return string
-// that declares winner of round.
+// Write function that plays single round. Return string that declares winner of round.
+
+function playRound(playerSelection, computerSelection) {
+    if (playerSelection === 'rock' && computerSelection === 'scissors') {
+        return 'You win! Rock beats scissors.';
+    } if (playerSelection === 'paper' && computerSelection === 'rock') {
+        return 'You win! Paper beats rock.';
+    } if (playerSelection === 'scissors' && computerSelection === 'paper') {
+        return 'You win! Scissors beats paper.';
+    } if (computerSelection === 'rock' && playerSelection === 'scissors') {
+        return 'You lose! Rock beats scissors.';
+    } if (computerSelection === 'paper' && playerSelection === 'rock') {
+        return 'You lose! Paper beats rock';
+    } if (computerSelection === 'scissors' && playerSelection === 'paper') {
+        return 'You lose! Scissors beats paper.'
+    } else {
+        return 'It\'s a tie! You both chose the same.';
+    }
+}
+
+const playerSelection = 'rock'; // makes playerSelection rock to test
+const computerSelection = computerPlay(); // makes compuerSelection result of computerPlay
+console.log(playRound(playerSelection, computerSelection)); //displays result of playRound function
 // Make function's playerSelection parameter case-insensitive.
 
 // Want to return results of this function call, not console.log. We'll
