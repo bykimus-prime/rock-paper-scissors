@@ -5,8 +5,7 @@ function computerPlay() {
     console.log(janken); // let's us see what the computer picks
     if (janken === 0) {
         return 'rock';
-    }
-    if (janken === 1) {
+    } if (janken === 1) {
         return 'paper';
     } else {
         return 'scissors';
