@@ -62,11 +62,13 @@ function game() {
         let playerSelection = prompt('Rock, Paper, or Scissors?').toLowerCase();
         let computerSelection = computerPlay();
 
+        console.log(`Round: ${round + 1}`);
         let roundResult = playRound(playerSelection, computerSelection);
         console.log(`You chose: ${playerSelection}, Computer chose: ${computerSelection}.`);
         console.log(roundResult);
 
-        if 
+        console.log(`Player Score: ${playerScore}`);
+        console.log(`Computer Score: ${computerScore}`);
     }
 }
 game ();
