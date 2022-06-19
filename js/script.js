@@ -4,8 +4,6 @@ let playerScore = 0;
 let computerScore = 0;
 let round = 0;
 
-let playerSelection = prompt('Rock, Paper, or Scissors?').toLowerCase();
-
 function computerPlay() {
     const janken = Math.floor(Math.random() * 3);
     if (janken === 0) {
@@ -43,9 +41,9 @@ function playRound(playerSelection, computerSelection) {
     }
 }
 
-const computerSelection = computerPlay(); // makes compuerSelection result of computerPlay
-console.log(`The Computer chose: ${computerSelection}`); // let's us see what the computer picks
-console.log(playRound(playerSelection, computerSelection)); // displays result of playRound function
+// const computerSelection = computerPlay(); // makes compuerSelection result of computerPlay
+// console.log(`The Computer chose: ${computerSelection}`); // let's us see what the computer picks
+// console.log(playRound(playerSelection, computerSelection)); // displays result of playRound function
 
 // Write new function called game(). Call the playRound function inside
 // of this one to play 5 round game that keeps score and reports winner
@@ -53,10 +51,14 @@ console.log(playRound(playerSelection, computerSelection)); // displays result o
 
 function game() {
     for (let i = 0; i < 5; i++) {
+        
+        let playerSelection = prompt('Rock, Paper, or Scissors?').toLowerCase();
+        let computerSelection = computerPlay();
+
         let roundResult = playRound(playerSelection, computerSelection);
         console.log(`You chose: ${playerSelection}, Computer chose: ${computerSelection}.`);
         console.log(roundResult);
     }
 }
-
+game ();
 // Use prompt() to get input from the user.
