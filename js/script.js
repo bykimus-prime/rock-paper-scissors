@@ -60,6 +60,12 @@ function game() {
     for (let i = 0; i < 5; i++) {
         
         let playerSelection = prompt('Rock, Paper, or Scissors?').toLowerCase();
+        // the following code is meant to prevent non rock paper scissors inputs, but i can't figure it out
+        // if (playerSelection != 'rock' || 'paper' || 'scissors') {
+        //     alert('Please choose only: rock, paper, or scissors');
+        //     i=-1;
+        //     continue;
+        // }
         let computerSelection = computerPlay();
 
         console.log(`Round: ${round + 1}`);
@@ -69,7 +75,14 @@ function game() {
 
         console.log(`Player Score: ${playerScore}`);
         console.log(`Computer Score: ${computerScore}`);
+        
+    }
+    if (playerScore > computerScore) {
+        console.log('You won the match! You beat the computer!');
+    } if (playerScore < computerScore) {
+        console.log('You lost the match! The computer beat you!');
+    } if (playerScore === computerScore) {
+        console.log('The match was a draw! You and the computer won the same number of rounds.');
     }
 }
 game ();
-// Use prompt() to get input from the user.
