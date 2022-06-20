@@ -48,10 +48,6 @@ function playRound(playerSelection, computerSelection) {
     }
 }
 
-// const computerSelection = computerPlay(); // makes compuerSelection result of computerPlay
-// console.log(`The Computer chose: ${computerSelection}`); // let's us see what the computer picks
-// console.log(playRound(playerSelection, computerSelection)); // displays result of playRound function
-
 // Write new function called game(). Call the playRound function inside
 // of this one to play 5 round game that keeps score and reports winner
 // or loser at the end.
@@ -60,8 +56,9 @@ function game() {
     for (let i = 0; i < 5; i++) {
         
         let playerSelection = prompt('Rock, Paper, or Scissors?').toLowerCase();
-        // the following code is meant to prevent non rock paper scissors inputs, but i can't figure it out
-        // if (playerSelection != 'rock' || 'paper' || 'scissors') {
+        
+        // this code prevents non-desired inputs and "pauses" loop, but doesn't work
+        // if (playerSelection != 'rock' && playerSelection != 'paper' && playerSelection != 'scissors') {
         //     alert('Please choose only: rock, paper, or scissors');
         //     i=-1;
         //     continue;
@@ -75,7 +72,6 @@ function game() {
 
         console.log(`Player Score: ${playerScore}`);
         console.log(`Computer Score: ${computerScore}`);
-        
     }
     if (playerScore > computerScore) {
         console.log('You won the match! You beat the computer!');
