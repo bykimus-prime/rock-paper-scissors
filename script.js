@@ -56,10 +56,7 @@ function game() {
     for (let i = 0; i < 5; i++) {
         
         let playerSelection = prompt('Rock, Paper, or Scissors?').toLowerCase();
-        do {alert('Please choose only: Rock, Paper, or Scissors')
-            i = -1
-        continue;
-        } while (playerSelection != 'rock' && playerSelection != 'paper' && playerSelection != 'scissors')
+       
         // this code prevents non-desired inputs and "pauses" loop, but doesn't work
         // if (playerSelection != 'rock' && playerSelection != 'paper' && playerSelection != 'scissors') {
         //     alert('Please choose only: rock, paper, or scissors');
