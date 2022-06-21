@@ -57,12 +57,15 @@ function game() {
         
         let playerSelection = prompt('Rock, Paper, or Scissors?').toLowerCase();
        
-        // this code prevents non-desired inputs and "pauses" loop, but doesn't work
-        // if (playerSelection != 'rock' && playerSelection != 'paper' && playerSelection != 'scissors') {
-        //     alert('Please choose only: rock, paper, or scissors');
-        //     i=-1;
-        //     continue;
-        // }
+        // this code checks for non rock, paper, or scissors. if true, says don't do that, sets the loop
+        // to try again, but allows loop to match the round if a correct response is eventually given.
+         if (playerSelection != 'rock' && playerSelection != 'paper' && playerSelection != 'scissors') {
+             alert('Please choose only: rock, paper, or scissors');
+             i = -1;
+             continue;
+         } else {
+            i = round;
+         }
         let computerSelection = computerPlay();
 
         console.log(`Round: ${round + 1}`);
