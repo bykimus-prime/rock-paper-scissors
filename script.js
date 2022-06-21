@@ -1,8 +1,8 @@
-// Write function called computerPlay that randomly returns rock, paper, or scissors.
-
 let playerScore = 0;
 let computerScore = 0;
 let round = 0;
+
+// Write function called computerPlay that randomly returns rock, paper, or scissors.
 
 function computerPlay() {
     const janken = Math.floor(Math.random() * 3);
@@ -66,6 +66,7 @@ function game() {
          } else {
             i = round;
          }
+         
         let computerSelection = computerPlay();
 
         console.log(`Round: ${round + 1}`);
