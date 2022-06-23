@@ -59,6 +59,7 @@ function game() {
        
         // this code checks for non rock, paper, or scissors. if true, says don't do that, sets the loop
         // to try again, but allows loop to match the round if a correct response is eventually given.
+        // This can most likely be done better and smoother.
          if (playerSelection != 'rock' && playerSelection != 'paper' && playerSelection != 'scissors') {
              alert('Please choose only: rock, paper, or scissors');
              i = -1;
